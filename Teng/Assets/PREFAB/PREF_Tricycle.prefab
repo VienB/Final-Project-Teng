@@ -5039,9 +5039,10 @@ GameObject:
   - component: {fileID: -1764256673738286553}
   - component: {fileID: 5756728762399639229}
   - component: {fileID: 892875327904388419}
+  - component: {fileID: -864435962308336677}
   m_Layer: 0
   m_Name: PREF_Tricycle
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5182,6 +5183,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0613788, y: 0.06416468, z: 0.07714479}
   m_Center: {x: 0.0167624, y: 0.024352463, z: -0.006214372}
+--- !u!114 &-864435962308336677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6184388219313429472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e29dc266b7d59a40945cb047d95560a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6247320685815726317
 GameObject:
   m_ObjectHideFlags: 0

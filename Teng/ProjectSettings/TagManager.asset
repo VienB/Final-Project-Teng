@@ -13,6 +13,13 @@ TagManager:
   - Coin
   - Pig
   - PlayerBody
+  - Obstacle
+  - BackgroundMusicSlider
+  - BackgroundMusic
+  - MenuMusic
+  - BackButtonMusicMenu
+  - ResumeButtonPause
+  - QuitButtonPause
   layers:
   - Default
   - TransparentFX

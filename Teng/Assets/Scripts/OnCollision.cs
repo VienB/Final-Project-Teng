@@ -39,6 +39,7 @@ public class OnCollision : MonoBehaviour
         }
         else if (other.CompareTag("Shark"))
         {
+            sharkPowerUp = true;
             playerCapsuleCollider.isTrigger = true;
             Destroy(other.transform.GetChild(0).gameObject);
             characterController.forwardSpeed += 10.0f;
@@ -64,6 +65,7 @@ public class OnCollision : MonoBehaviour
         yield return new WaitForSeconds(8);
         characterController.forwardSpeed -= 10.0f;
         playerCapsuleCollider.isTrigger = false;
+        sharkPowerUp = false;
     }
 
     public IEnumerator PigDuration()

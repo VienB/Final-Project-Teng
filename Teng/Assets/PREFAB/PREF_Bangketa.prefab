@@ -3650,9 +3650,10 @@ GameObject:
   - component: {fileID: -2108335594921973099}
   - component: {fileID: 7372974490703009216}
   - component: {fileID: 858863222212746150}
+  - component: {fileID: -612011318998692162}
   m_Layer: 0
   m_Name: PREF_Bangketa
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3713,6 +3714,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.6588404, y: 1.0316283, z: 4.2560344}
   m_Center: {x: 5.342546, y: -2.5535352, z: -2.03718}
+--- !u!114 &-612011318998692162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4008401338056262579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e29dc266b7d59a40945cb047d95560a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4131895844783015468
 GameObject:
   m_ObjectHideFlags: 0

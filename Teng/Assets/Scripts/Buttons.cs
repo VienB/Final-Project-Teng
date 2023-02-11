@@ -12,6 +12,8 @@ public class Buttons : MonoBehaviour
     public Button pauseButton;
     public Button resumeButton;
 
+    public int howToPointer = 2;
+
     public bool gamePause = false;
 
     public GameObject mainMenuMusic;
@@ -50,6 +52,7 @@ public class Buttons : MonoBehaviour
         pauseMenu = GameObject.Find("PAUSE MENU");
         logo = GameObject.Find("LOGO");
 
+        howToPointer = 4;
 
         gamePause = false;
         mainMenu.gameObject.SetActive(true);
@@ -66,6 +69,69 @@ public class Buttons : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (howToPointer == 4)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if(howToPointer == 5)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(true);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if (howToPointer == 6)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(true);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if (howToPointer == 7)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(true);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if (howToPointer == 8)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(true);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if (howToPointer == 9)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(true);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(false);
+        }
+        if (howToPointer == 10)
+        {
+            mainMenu.transform.GetChild(5).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(6).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(7).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(8).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(9).gameObject.SetActive(false);
+            mainMenu.transform.GetChild(10).gameObject.SetActive(true);
+        }
         if (playerController.gameOver == true)
         {
             coinBoard.gameObject.SetActive(false);
@@ -131,5 +197,21 @@ public class Buttons : MonoBehaviour
         coinBoardScore.ResettingCoin();
         scoreScriptReference.ResettingScore();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void HowToPlayClicker()
+    {
+        howToPointer = 5;
+    }
+    public void HowToPlayNext()
+    {
+        howToPointer += 1;
+    }
+    public void HowToPlayBack()
+    {
+        howToPointer -= 1;
+    }
+    public void HowToPlayExit()
+    {
+        howToPointer = 4;
     }
 }

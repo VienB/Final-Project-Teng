@@ -8,11 +8,12 @@ public class SliderForMusic : MonoBehaviour
 {
     private Slider backgroundMusicSlider;
     private AudioSource backgroundMusicSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        backgroundMusicSlider = GameObject.Find("BG Music Slider").GetComponent<Slider>();
-        backgroundMusicSource = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        backgroundMusicSlider = GetComponent<Slider>();
+        backgroundMusicSource = GameObject.FindGameObjectWithTag("BackgroundMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
